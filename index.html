@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Weather Dashboard</h1>
+    </header>
+    <main>
+        <section class="city-container">
+            <form class="search">
+                <input type="text" name="city-search" id="city-search" placeholder="Enter a city!">
+                <button type="submit" id="search-btn">Search</button>
+            </form>
+        </section>
+        <!-- Current Weather section -->
+        <section class="current-weather-container">
+            <h2>Today</h2>
+            <section class="current-weather">
+
+                <article class="today-card card hidden">
+                    <section class="current-header">
+                        <div class="title-date-container">
+                            <h2 id="city-name"></h2>
+                            <p id="date-today"></p>
+                        </div>
+                        <img src="" alt="" class="weather-pic">
+                    </section>
+                    
+                    <section class="today-info">
+                        <p id="condition"></p>
+                        <p id="temp"></p>
+                        <p id="wind"></p>
+                        <p id="humidity"></p>
+                        <p id="uv"></p>
+                    </section> 
+                </article>
+    
+                <section class="chart card">
+                    <canvas id="weather-chart"></canvas>
+                </section>
+                
+            </section>
+        </section>
+        
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <script src="./js/functions.js"></script> 
+</body>
+</html>
