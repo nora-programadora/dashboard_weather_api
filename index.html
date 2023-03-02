@@ -22,7 +22,7 @@
         <section class="current-weather-container">
             <h2>Today</h2>
             <section class="current-weather">
-
+                <!-- Current Weather Card -->
                 <article class="today-card card hidden">
                     <section class="current-header">
                         <div class="title-date-container">
@@ -41,6 +41,7 @@
                     </section> 
                 </article>
     
+                <!-- Chart -->
                 <section class="chart card">
                     <canvas id="weather-chart"></canvas>
                 </section>
@@ -48,10 +49,23 @@
             </section>
         </section>
         
+
+        <!-- Forcast Section -->
+        <section class="forcast-container">
+            <h2>5 Day Forcast</h2>
+            <section class="forcast">
+                <!-- cards inserted with js -->
+            </section>   
+        </section>
+        
     </main>
 
+
+  
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
     <script src="./js/functions.js"></script> 
+    <!-- <script type="module" src="./js/chartConfig.js"></script>  -->
 </body>
 </html>

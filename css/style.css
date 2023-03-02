@@ -39,3 +39,160 @@ main {
     width: min(100%, 85rem);
     margin: auto;
 }
+
+.card {
+    /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
+    background-color: white;
+}
+
+.card p {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*search section styling */
+.search {
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.search > input {
+    padding: .5rem;
+}
+
+.search > button {
+    padding: .5rem 2rem;
+    min-width: 19rem;
+}
+
+.search > button:active {
+    margin: .25rem auto -.25rem auto;
+}
+
+.city-container, .recent-cities, .search {
+    display: flex;
+}
+
+.city-container {
+    gap: 2rem;
+}
+
+.recent-cities {
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+/* Today weather section */
+.current-weather {
+    display: flex;
+    gap: 2rem;
+    max-height: 25rem;
+    min-width: 0;
+}
+
+.today-card {
+    min-width: 15rem;
+    padding: 0 2rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.current-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-header > img {
+    margin-right: -1.8rem;
+}
+
+.today-info {
+    margin-top: 4rem;
+}
+.today-info > p {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* chart container */
+.chart {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    padding: 1rem;
+}
+
+#weather-chart {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* forcast section */
+.forcast {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.day-card {
+    min-width: 10rem;
+    padding: 1rem; 
+    flex-grow: 1;  
+}
+
+.day-card-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.day-card-title-container h3, .day-card-title-container p {
+    margin: 0;
+}
+
+.day-pic-container {
+    text-align: center;
+}
+
+
+
+/* mobile styling */
+@media (max-width:  700px) {
+
+    .city-container {
+        flex-direction: column;
+    }
+
+    .recent-cities > button {
+        flex-basis: calc(49% );
+        padding: .5rem 0;
+    }
+
+    .current-weather {
+        flex-wrap: wrap;
+        max-height: none;
+    }
+
+    .today-card{
+        flex-basis: 100%;  
+    }
+
+    .chart {
+        min-height: 20rem;
+    }
+}
+
+
+/*helper styles*/
+.hidden {
+    display: none;
+}
+
+.input-error {
+    border: .2rem solid red;
+    border-radius: .25rem;
+}
