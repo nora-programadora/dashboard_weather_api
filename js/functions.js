@@ -23,7 +23,6 @@ const forcast = document.querySelector('.forcast');
 //variables for search and city buttons
 const searchForm = document.querySelector('.search');
 const searchBtn = document.querySelector('#search-btn');
-const recentCities = document.querySelector('.recent-cities');
 
 //weather chart variable -> holds chart object when created
 let weatherChart = null;
@@ -94,7 +93,6 @@ const pageInitialize = () => {
     if(cities.length) {
         getWeather(cities[0].name, cities[0].lat, cities[0].lng);
     } else {
-       recentCities.innerHTML = '<p class="new-user-msg">Please Select A City!</p>';
        weatherTodayCont.classList.add('hidden');
        forcastCont.classList.add('hidden');
     }
@@ -362,11 +360,6 @@ function beforePrintHandler () {
 
 //-------------------------------------- Initialize ------------------------------------------ //
 
-//Initialization Function
-const init = () => {
+
     pageInitialize();
     searchForm.addEventListener('submit', searchHandler);
-}
-
-//Wait for window to load to initialize
-window.addEventListener('load', init);
