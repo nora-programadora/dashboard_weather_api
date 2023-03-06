@@ -360,11 +360,6 @@ function beforePrintHandler () {
 
 //-------------------------------------- Initialize ------------------------------------------ //
 
-//Initialization Function
-const init = () => {
+
     pageInitialize();
     searchForm.addEventListener('submit', searchHandler);
-}
-
-//Wait for window to load to initialize
-window.addEventListener('load', init);
